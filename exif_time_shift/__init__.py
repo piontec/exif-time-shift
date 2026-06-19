@@ -115,9 +115,7 @@ def main():
 
     for filename in os.listdir(directory):
         filepath = os.path.join(directory, filename)
-        if os.path.isfile(filepath) and filename.lower().endswith(
-            (".jpg", ".jpeg", ".arw")
-        ):
+        if os.path.isfile(filepath) and filename.lower().endswith((".jpg", ".jpeg", ".arw")):
             try:
                 shift_exif_date(filepath, minutes)
             except Exception as e:
